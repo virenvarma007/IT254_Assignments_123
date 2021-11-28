@@ -1,0 +1,188 @@
+.body-image {
+  background-image: url("Q1/images/Campus/pic 4.jpg");
+  background-repeat: no-repeat;
+  height: 1200px;
+  width: 1500px;
+  background-size: cover;
+  position: relative;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+#clock {
+  font-size: 75px;
+  width: 450px;
+  margin: 50px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.header1 {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 20px;
+}
+
+.headerMe {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 20px;
+}
+
+.headerCampus {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 20px;
+}
+
+.headerProjects {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 20px;
+}
+
+.gallery {
+  margin: 10px 50px;
+}
+
+.gallery img {
+  align-self: center;
+  filter: brightness(50%) blur(1px) drop-shadow(8px 8px 10px grey);
+  transition: 1s;
+  padding: 30px;
+  width: 200px;
+  height: 400px;
+}
+
+.gallery img:hover {
+  filter: blur(0px) brightness(100%);
+  transform: scale(1.1);
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.Q4_and_Q5_back {
+  background-color: rgb(133, 133, 8);
+}
+
+.sidebar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: rgb(121, 35, 3);
+}
+
+.sidebar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #111;
+}
+
+.footer {
+  background-color: black;
+}
+
+.footer p {
+  color: white;
+  text-align: right;
+}
+
+.footer h1 {
+  text-align: right;
+  color: white;
+}
+
+form {
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}

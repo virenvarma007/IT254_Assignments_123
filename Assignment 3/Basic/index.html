@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Assignment 1</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="header1">
+      <h1>WTA-Assignment 3- Javascript (basic)</h1>
+      <p>- By Viren Varma</p>
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a class="active" href="index.html">Q1</a></li>
+        <li><a href="#Q2">Q2</a></li>
+        <li><a href="Q4.html">Q3 and Q4</a></li>
+      </ul>
+    </div>
+    <div id="Q1">
+      <p><h1>Q1)</h1></p>
+      <div id="clock">8:10:45</div>
+  
+      
+      <center><button id="loopToNextMinute" onclick="skipAhead()">Loop to Next Minute</button></center>
+      <script>
+          setInterval(showTime, 1000);
+          
+          function showTime() {
+            
+            let time = new Date();
+              let hour = time.getHours();
+              let min = time.getMinutes();
+              let sec = time.getSeconds();
+              am_pm = "AM";
+    
+              if (hour > 12) {
+                  hour -= 12;
+                  am_pm = "PM";
+              }
+              if (hour == 0) {
+                  hr = 12;
+                  am_pm = "AM";
+              }
+    
+              hour = hour < 10 ? "0" + hour : hour;
+              min = min < 10 ? "0" + min : min;
+              sec = sec < 10 ? "0" + sec : sec;
+    
+              let currentTime = hour + ":" 
+                  + min + ":" + sec + am_pm;
+    
+              document.getElementById("clock")
+                  .innerHTML = currentTime;
+          }
+    
+          showTime();
+           
+      </script>
+      <script>
+
+        function skipAhead() {
+            let time = new Date();
+              let hour = time.getHours();
+              let min = time.getMinutes();
+              let sec = time.getSeconds();
+              for(let i=0; i<60; i++){
+                sec=sec+1;
+              }
+              if(sec>60){
+                min=min+1;
+                sec=sec-60;
+              }
+              if(min>60){
+                hour=hour+1;
+                min=min-60;
+              }
+              am_pm = "AM";
+              if (hour > 12) {
+                  hour -= 12;
+                  am_pm = "PM";
+              }
+              if (hour == 0) {
+                  hr = 12;
+                  am_pm = "AM";
+              }
+              hour = hour < 10 ? "0" + hour : hour;
+              min = min < 10 ? "0" + min : min;
+              sec = sec < 10 ? "0" + sec : sec;
+    
+              let currentTime = hour + ":" 
+                  + min + ":" + sec + am_pm;
+    
+              document.getElementById("clock")
+                  .innerHTML = "Updated Time: "+currentTime;
+                  
+          }
+      </script>
+    </div>
+    <div id="Q2">
+      <p><h1>Q2)</h1></p>
+      <div class="gallery">
+        <a href="Q1/books.html"
+          ><img src="Q1/images/Books/pic 1.jpg" width="200" height="400"
+        /></a>
+        <a href="Q1/food.html"
+          ><img src="Q1/images/Food/pic 1.jpg" width="200" height="400"
+        /></a>
+        <a href="Q1/movies.html"
+          ><img src="Q1/images/Movies/pic1.jpg" width="200" height="400"
+        /></a>
+      </div>
+    </div>
+    <div class="footer">
+      <h1>WTA-Assignment 1</h1>
+      <p>
+        - By Viren Varma<br />
+        191ME293 <br />
+        IT Minor
+      </p>
+    </div>
+  </body>
+</html>

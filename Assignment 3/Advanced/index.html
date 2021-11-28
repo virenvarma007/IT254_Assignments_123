@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Assignment 3 - Q4</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="header1">
+      <h1>WTA-Assignment 3- Javascript (Advance)</h1>
+      <p>- By Viren Varma</p>
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a class="active" href="index.html">Feedback Form</a></li>
+        <li><a href="#itemList">Item List</a></li>
+      </ul>
+    </div>
+    <div style="text-align: center;">
+      <h1>Feedback Form</h1>
+      <br />
+      <form action="/action_page.php">
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname" value="Viren" /><br />
+        <label for="mname">Middle name:</label><br />
+        <input type="text" id="mname" value="Dipin" /><br />
+        <label for="fname">Last name:</label><br />
+        <input type="text" id="lname" value="Varma" /><br />
+        <label for="phone">Phone:</label><br />
+        <input type="text" value="9969894552" id="phone" /><br />
+        <label for="city">City:</label><br />
+        <input type="text" value="Mumbai" id="city" /><br />
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          value="virenvarma007@gmail.com"
+        /><br />
+        <label for="comments">Comments:</label><br />
+        <textarea id="comments" rows="10" cols="50">
+The Website Works Well may a little bit more styling maybe.</textarea
+        ><br />
+        <br />
+        <input type="button" value="Submit" id="myBtn" />
+      </form>
+		</div>
+		<div id="itemList">
+      <h1 style="text-align: center">Item List</h1>
+      <br />
+      <form action="/action_page.php">
+        <table>
+					<tr>
+						<th>Items</th>
+						<th>Price/Kgs</th>
+						<th>Quantity (in Kgs)</th>
+					</tr>
+					<tr>
+						<td>Item 1</td>
+						<th>100</th>
+						<th><input type="text" value="1" id="item1"></th>
+					</tr>
+					<tr>
+						<td>Item 2</td>
+						<th>40</th>
+						<th><input type="text" value="2" id="item2"></</th>
+					</tr>
+					<tr>
+						<td>Item 3</td>
+						<th>25</th>
+						<th><input type="text" value="1" id="item3"></</th>
+					</tr>
+					<tr>
+						<td></td>
+						<th><input type="button" value="Result" onclick="sumValue()"></th>
+						<th id="answer"></</th>
+					</tr>
+				</table>
+      </form>
+    </div>
+    <div class="footer">
+      <h1>WTA-Assignment 1</h1>
+      <p>
+        - By Viren Varma<br />
+        191ME293 <br />
+        IT Minor
+      </p>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="data">hello</p>
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById("myModal");
+
+      var btn = document.getElementById("myBtn");
+
+      var span = document.getElementsByClassName("close")[0];
+
+      
+
+      function validateForm() {
+        var fname = document.getElementById("fname").value;
+        var mname = document.getElementById("mname").value;
+        var lname = document.getElementById("lname").value;
+        var city = document.getElementById("city").value;
+        var comments = document.getElementById("comments").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        if (
+          fname == "" ||
+          lname == "" ||
+          city == "" ||
+          comments == "" ||
+          email == ""
+        ) {
+          alert("Fill all the details");
+          return false;
+        }
+        errors = [];
+        if (phone.search(/[a-z]/i) > 0) {
+          errors.push(
+            "phone number must be of only digits and no other characters"
+          );
+        }
+        if (phone.length < 10 || phone.length > 10) {
+          errors.push(
+            "phone number must be of only 10 digits " + phone.search(/[0-9]/)
+          );
+        }
+
+        if (fname.search(/[A-Z]/) != 0) {
+          errors.push("First letter of first name should be capital");
+        }
+        if (mname.search(/[A-Z]/) != 0) {
+          errors.push("First letter of middle name should be capital");
+        }
+        if (lname.search(/[A-Z]/) != 0) {
+          errors.push("First letter of last name should be capital");
+        }
+        if (errors.length > 0) {
+          alert(errors.join("\n"));
+          return false;
+        }
+        return true;
+      }
+
+      btn.onclick = function () {
+        var fname = document.getElementById("fname").value;
+        var mname = document.getElementById("mname").value;
+        var lname = document.getElementById("lname").value;
+        var city = document.getElementById("city").value;
+        var comments = document.getElementById("comments").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        if (validateForm() == true) {
+          var str =
+            fname +
+            " " +
+            lname +
+            "\n" +
+            city +
+            "\n" +
+            email +
+            "\n" +
+            phone +
+            "\n" +
+            comments;
+          console.log(name);
+          alert(str);
+          //document.getElementById("data").innerHTML = str;
+          //modal.style.display = "block";
+        }
+      };
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+		</script>
+		<script>
+			function sumValue(){
+				var item1 = document.getElementById("item1").value;
+				var item2 = document.getElementById("item2").value;
+				var item3 = document.getElementById("item3").value;
+				var sum=100*item1+40*item2+25*item3;
+				document.getElementById("answer").innerHTML=sum;
+			}
+	</script>
+  </body>
+</html>

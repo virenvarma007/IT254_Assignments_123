@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Assignment 3 - Q4</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="header1">
+      <h1>WTA-Assignment 3- Javascript (basic)- Q4</h1>
+      <p>- By Viren Varma</p>
+    </div>
+    <div class="navbar">
+      <ul>
+        <li><a class="active" href="index.html">back</a></li>
+      </ul>
+    </div>
+    <div style="text-align: center;">
+      <h1>Feedback Form</h1>
+      <br />
+      <form action="/action_page.php">
+        <label for="fname">Full name:</label><br />
+        <input type="text" id="fname" name="fname" value="Viren Varma" /><br />
+        <label for="city">City:</label><br />
+        <input type="text" value="Mumbai" id="city" name="city" /><br />
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email "
+          value="virenvarma007@gmail.com"
+        /><br />
+        <label for="comments">Comments:</label><br />
+        <textarea id="comments" name="comments" rows="10" cols="50">
+The Website Works Well may a little bit more styling maybe.</textarea
+        ><br />
+        <br />
+        <input type="button" value="Submit" id="myBtn" onclick="func()" />
+      </form>
+    </div>
+    <div class="footer">
+      <h1>WTA-Assignment 1</h1>
+      <p>
+        - By Viren Varma<br />
+        191ME293 <br />
+        IT Minor
+      </p>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="data">hello</p>
+      </div>
+    </div>
+    <script>
+      var modal = document.getElementById("myModal");
+
+      var btn = document.getElementById("myBtn");
+
+      var span = document.getElementsByClassName("close")[0];
+
+      function func() {
+        var name = document.getElementById("fname").value;
+        var city = document.getElementById("city").value;
+        var comments = document.getElementById("comments").value;
+        var email = document.getElementById("email").value;
+        var str = name + "\n" + city + "\n" + email + "\n" + comments;
+        console.log(name);
+        document.getElementById("data").innerHTML = str;
+        modal.style.display = "block";
+      }
+
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

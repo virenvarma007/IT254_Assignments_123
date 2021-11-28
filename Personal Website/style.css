@@ -1,0 +1,141 @@
+.body-image {
+  background-image: url("Q1/images/Campus/pic 4.jpg");
+  background-repeat: no-repeat;
+  height: 1200px;
+  width: 1500px;
+  background-size: cover;
+  position: relative;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4caf50;
+}
+
+.header1 {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 20px;
+}
+
+.headerMe {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 20px;
+}
+
+.headerCampus {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 20px;
+}
+
+.headerProjects {
+  padding: 5px;
+  text-align: center;
+  background: #1abc9c;
+  color: black;
+  font-size: 20px;
+}
+
+.gallery {
+  margin: 10px 50px;
+}
+
+.gallery img {
+  align-self: center;
+  filter: brightness(50%) blur(1px) drop-shadow(8px 8px 10px grey);
+  transition: 1s;
+  padding: 30px;
+  width: 200px;
+  height: 400px;
+}
+
+.gallery img:hover {
+  filter: blur(0px) brightness(100%);
+  transform: scale(1.1);
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+.Q4_and_Q5_back {
+  background-color: rgb(133, 133, 8);
+}
+
+.sidebar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  background-color: rgb(121, 35, 3);
+}
+
+.sidebar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background-color: #111;
+}
+
+.footer {
+  background-color: black;
+}
+
+.footer p {
+  color: white;
+  text-align: right;
+}
+
+.footer h1 {
+  text-align: right;
+  color: white;
+}
+
+form {
+  text-align: center;
+}
